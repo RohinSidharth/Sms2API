@@ -12,13 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="104dp"
         android:text="POST SMS To API"
-        android:textSize="48sp" />
+        android:textSize="34sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Post API Address Below:"
+        android:text="Enter API Address Below:"
         android:textSize="20sp" />
 
     <EditText
