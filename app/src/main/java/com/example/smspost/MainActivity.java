@@ -19,7 +19,7 @@ import java.io.OutputStreamWriter;
 
 public class MainActivity extends AppCompatActivity {
     //API URL the user provides
-    String posturi;
+    public static String posturi;
     EditText urlInput;
     Button saveButton;
 
@@ -52,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 posturi = urlInput.getText().toString().trim();
+                SharedPreferences sharedPref = getSharedPreferences("com.example.smspost", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString("url", posturi);
+                editor.commit();
+
+                Toast.makeText(getApplicationContext(), "Saved", Toast.LENGTH_LONG).show();
             }
         });
     }

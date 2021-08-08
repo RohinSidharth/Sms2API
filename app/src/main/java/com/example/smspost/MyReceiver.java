@@ -3,6 +3,7 @@ package com.example.smspost;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
@@ -62,7 +63,11 @@ public class MyReceiver extends BroadcastReceiver {
                 RequestQueue MyRequestQueue = Volley.newRequestQueue(context);
 
                 //Create a String Request
-                String url = "http://yourdomain.com/path";
+                SharedPreferences sharedPref = context.getSharedPreferences("com.example.smspost",Context.MODE_PRIVATE);
+                String url = "com.example.smspost.url";
+                String posturl = sharedPref.getString("url", url);
+
+                Toast.makeText(context, "Forwarding to: " + posturl, Toast.LENGTH_LONG).show();
                 StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
