@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.OutputStreamWriter;
@@ -46,7 +47,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        SharedPreferences sharedPref = getSharedPreferences("com.example.smspost",Context.MODE_PRIVATE);
+        String url = "com.example.smspost.url";
+        String posturl = sharedPref.getString("url", url);
+
         urlInput = (EditText) findViewById(R.id.posturl);
+        urlInput.setText(posturl, TextView.BufferType.EDITABLE);
         saveButton = (Button) findViewById(R.id.button);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override

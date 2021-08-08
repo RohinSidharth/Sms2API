@@ -62,27 +62,32 @@ public class MyReceiver extends BroadcastReceiver {
                 //Make a POST API call
                 RequestQueue MyRequestQueue = Volley.newRequestQueue(context);
 
-                //Create a String Request
+                //Get url from shared preferences
                 SharedPreferences sharedPref = context.getSharedPreferences("com.example.smspost",Context.MODE_PRIVATE);
                 String url = "com.example.smspost.url";
                 String posturl = sharedPref.getString("url", url);
-
                 Toast.makeText(context, "Forwarding to: " + posturl, Toast.LENGTH_LONG).show();
-                StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+
+                //Create a String Request
+                StringRequest MyStringRequest = new StringRequest(Request.Method.POST, posturl, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         //This code is executed if the server responds, whether or not the response contains data.
                         //The String 'response' contains the server's response.
+                        Toast.makeText(context, response.substring(0,500), Toast.LENGTH_LONG).show();
                     }
                 }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //This code is executed if there is an error.
+                        Toast.makeText(context, "Error: " + error, Toast.LENGTH_LONG).show();
                     }
-                }) {
+                })
+                {
                     protected Map<String, String> getParams() {
                         Map<String, String> MyData = new HashMap<String, String>();
-                        MyData.put("Field", "Value"); //Add the data you'd like to send to the server.
+                        MyData.put("Subject", phoneNo); //Add the data you'd like to send to the server.
+                        MyData.put("Message", msg);
                         return MyData;
                     }
                 };
