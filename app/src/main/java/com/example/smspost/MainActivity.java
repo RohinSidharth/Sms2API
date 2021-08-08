@@ -5,12 +5,23 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import java.io.OutputStreamWriter;
+
 public class MainActivity extends AppCompatActivity {
+    //API URL the user provides
+    String posturi;
+    EditText urlInput;
+    Button saveButton;
 
     //Ask for permissions
     private static final int MY_PERMISSIONS_REQUEST_RECEIVE_SMS = 0;
@@ -20,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //check permissions if not granted
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED)
         {
@@ -35,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECEIVE_SMS}, MY_PERMISSIONS_REQUEST_RECEIVE_SMS);
             }
         }
+
+        urlInput = (EditText) findViewById(R.id.posturl);
+        saveButton = (Button) findViewById(R.id.button);
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                posturi = urlInput.getText().toString().trim();
+            }
+        });
     }
     //OnCreate
 
@@ -57,18 +76,20 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "App needs RECEIVE_SMS permission to continue", Toast.LENGTH_LONG).show();
                 }
             }
+            /*
             case MY_PERMISSIONS_REQUEST_INTERNET:
             {
                 //check if the length of grantResults is greater than 0 and is equal to PERMISSION_GRANTED
-                if(grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED)
+                if(grantResults.length>0 && grantResults[1]==PackageManager.PERMISSION_GRANTED)
                 {
                     Toast.makeText(this, "Thanks for the Permissions", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    Toast.makeText(this, "App needs RECEIVE_SMS permission to continue", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, "App needs WIFI permission to continue", Toast.LENGTH_LONG).show();
                 }
             }
+            */
         }
     }
 }
