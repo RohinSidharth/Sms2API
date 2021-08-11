@@ -22,12 +22,12 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/posturl"
         android:layout_width="match_parent"
         android:layout_height="98dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="https://"
+        android:hint="https://"
+        android:inputType="textUri|textWebEmailAddress"
         android:textSize="20sp" />
 
     <Button
