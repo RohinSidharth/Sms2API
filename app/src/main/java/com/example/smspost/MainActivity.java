@@ -48,12 +48,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         SharedPreferences sharedPref = getSharedPreferences("com.example.smspost",Context.MODE_PRIVATE);
-        String url = "com.example.smspost.url";
-        String posturl = sharedPref.getString("url", url);
-
-        urlInput = (EditText) findViewById(R.id.posturl);
+        String posturl = sharedPref.getString("url", "com.example.smspost.url");
+        urlInput = findViewById(R.id.posturl);
         urlInput.setText(posturl, TextView.BufferType.EDITABLE);
-        saveButton = (Button) findViewById(R.id.button);
+        saveButton = findViewById(R.id.button);
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
