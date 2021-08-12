@@ -4,37 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#161A1E"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="104dp"
-        android:text="POST SMS To API"
+        android:layout_height="59dp"
+        android:fontFamily="monospace"
+        android:text="Forward SMS To API"
+        android:textColor="#CD5E5E"
         android:textSize="34sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="39dp"
+        android:fontFamily="monospace"
         android:text="Enter API Address Below:"
+        android:textColor="#168DBC"
         android:textSize="20sp" />
 
     <EditText
         android:id="@+id/posturl"
         android:layout_width="match_parent"
         android:layout_height="98dp"
+        android:background="#C3A8A8"
         android:ems="10"
+        android:fontFamily="monospace"
         android:hint="https://"
         android:inputType="textUri|textWebEmailAddress"
+        android:textColor="#1F201E"
         android:textSize="20sp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="81dp"
+        android:layout_height="60dp"
+        android:fontFamily="monospace"
         android:gravity="right"
         android:text="Save"
-        android:textSize="48sp" />
+        android:textSize="34sp"
+        app:backgroundTint="#7A4F4F" />
 </LinearLayout>

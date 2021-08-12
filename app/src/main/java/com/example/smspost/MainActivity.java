@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Ask for permissions
     private static final int MY_PERMISSIONS_REQUEST_RECEIVE_SMS = 0;
-    private static final int MY_PERMISSIONS_REQUEST_INTERNET = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,20 +85,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "App needs RECEIVE_SMS permission to continue", Toast.LENGTH_LONG).show();
                 }
             }
-            /*
-            case MY_PERMISSIONS_REQUEST_INTERNET:
-            {
-                //check if the length of grantResults is greater than 0 and is equal to PERMISSION_GRANTED
-                if(grantResults.length>0 && grantResults[1]==PackageManager.PERMISSION_GRANTED)
-                {
-                    Toast.makeText(this, "Thanks for the Permissions", Toast.LENGTH_LONG).show();
-                }
-                else
-                {
-                    Toast.makeText(this, "App needs WIFI permission to continue", Toast.LENGTH_LONG).show();
-                }
-            }
-            */
         }
     }
 }
