@@ -7,6 +7,5 @@
 
 SETUP:
 Has 2 Parts.
-a. Android App (This Repository. Will be added to Google PlayStore soon)
-b. Custom API that can process a POST call (https://github.com/RohinSidharth/SmsReceiverWebApi). Just deploy on IIS. Will add PowerShell one-liner to help deploy it.
-
+1. Android App (This Repository. Will be added to Google PlayStore later)
+2. Custom API that can process a POST call (https://github.com/RohinSidharth/SmsReceiverWebApi). Just deploy on IIS. Will add PowerShell one-liner to help deploy it.
