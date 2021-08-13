@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         SharedPreferences sharedPref = getSharedPreferences("com.example.smspost",Context.MODE_PRIVATE);
-        String posturl = sharedPref.getString("url", "com.example.smspost.url");
+        //String posturl = sharedPref.getString("url", "com.example.smspost.url");
+        String posturl = sharedPref.getString("url", null);
         urlInput = findViewById(R.id.posturl);
         urlInput.setText(posturl, TextView.BufferType.EDITABLE);
         saveButton = findViewById(R.id.button);

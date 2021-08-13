@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SmsPost</string>
+    <string name="this_app_listens_to_all_incoming_sms_and_auto_forwards_them_to_an_api_you_can_specify_below">This app listens to all incoming SMS and Auto-forwards them to an API you can specify below:</string>
 </resources>

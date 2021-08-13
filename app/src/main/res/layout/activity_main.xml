@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#161A1E"
+    android:background="#575E65"
     android:orientation="vertical"
+    android:theme="@style/CardView.Light"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,38 +14,55 @@
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:fontFamily="monospace"
+        android:gravity="center_horizontal|center_vertical"
         android:text="Forward SMS To API"
-        android:textColor="#CD5E5E"
-        android:textSize="34sp" />
+        android:textColor="#74E179"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="#2196F3" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:text="Enter API Address Below:"
-        android:textColor="#168DBC"
-        android:textSize="20sp" />
+        android:gravity="bottom"
+        android:inputType="textMultiLine|textImeMultiLine"
+        android:lineSpacingExtra="4sp"
+        android:padding="12dp"
+        android:textColor="#E1E5E8"
+        android:textSize="19sp"
+        android:textStyle="normal"
+        android:typeface="normal"
+        tools:text="This App will auto-forward incoming SMS to any API" />
 
     <EditText
         android:id="@+id/posturl"
         android:layout_width="match_parent"
-        android:layout_height="98dp"
-        android:background="#C3A8A8"
+        android:layout_height="81dp"
+        android:background="#E5EFF3"
         android:ems="10"
         android:fontFamily="monospace"
-        android:hint="https://"
+        android:hint="http://192.168.0.100/api/sms"
         android:inputType="textUri|textWebEmailAddress"
+        android:padding="10dp"
         android:textColor="#1F201E"
         android:textSize="20sp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:fontFamily="monospace"
-        android:gravity="right"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal"
         android:text="Save"
         android:textSize="34sp"
-        app:backgroundTint="#7A4F4F" />
+        app:backgroundTint="#415BEA"
+        app:cornerRadius="@android:dimen/app_icon_size" />
 </LinearLayout>
