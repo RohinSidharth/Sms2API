@@ -5,7 +5,7 @@
  1. In automations where SMS/OTP authentication is required.
  2. Can be used as a webhook to trigger a task on receiving a specific SMS
 
-SETUP
+SETUP:
 Has 2 Parts.
 a. Android App (This Repository. Will be added to Google PlayStore soon)
 b. Custom API that can process a POST call (https://github.com/RohinSidharth/SmsReceiverWebApi). Just deploy on IIS. Will add PowerShell one-liner to help deploy it.
