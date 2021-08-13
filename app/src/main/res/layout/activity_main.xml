@@ -35,17 +35,72 @@
         android:inputType="textMultiLine|textImeMultiLine"
         android:lineSpacingExtra="4sp"
         android:padding="12dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#E1E5E8"
         android:textSize="19sp"
         android:textStyle="normal"
-        android:typeface="normal"
-        tools:text="This App will auto-forward incoming SMS to any API" />
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C6D8E4"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:inputType="textMultiLine|textImeMultiLine"
+        android:padding="10dp"
+        android:text="@string/instructions"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewStep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="none"
+        android:background="#C6D8E4"
+        android:clickable="true"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:inputType="textMultiLine|textImeMultiLine"
+        android:padding="10dp"
+        android:text="@string/step_1_setup_post_api"
+        android:textColorLink="#3F51B5"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C6D8E4"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_vertical"
+        android:inputType="textMultiLine|textImeMultiLine"
+        android:padding="10dp"
+        android:text="STEP 2: Put the API link obtained from Step1 in the field below"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="bottom"
+        android:inputType="textMultiLine|textImeMultiLine"
+        android:lineSpacingExtra="4sp"
+        android:padding="12dp"
+        android:text="Put API link below:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#2196F3"
+        android:textSize="19sp"
+        android:textStyle="normal|bold"
+        android:typeface="normal" />
 
     <EditText
         android:id="@+id/posturl"
         android:layout_width="match_parent"
-        android:layout_height="81dp"
-        android:background="#E5EFF3"
+        android:layout_height="67dp"
+        android:background="#FFFFFF"
         android:ems="10"
         android:fontFamily="monospace"
         android:hint="http://192.168.0.100/api/sms"
@@ -62,7 +117,8 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
         android:text="Save"
-        android:textSize="34sp"
+        android:textSize="24sp"
         app:backgroundTint="#415BEA"
         app:cornerRadius="@android:dimen/app_icon_size" />
+
 </LinearLayout>

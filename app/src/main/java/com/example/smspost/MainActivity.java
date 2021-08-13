@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,8 +48,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         SharedPreferences sharedPref = getSharedPreferences("com.example.smspost",Context.MODE_PRIVATE);
-        //String posturl = sharedPref.getString("url", "com.example.smspost.url");
         String posturl = sharedPref.getString("url", null);
+        TextView textViewStep1 = (TextView) findViewById(R.id.textViewStep1);
+        textViewStep1.setMovementMethod(LinkMovementMethod.getInstance());
+
         urlInput = findViewById(R.id.posturl);
         urlInput.setText(posturl, TextView.BufferType.EDITABLE);
         saveButton = findViewById(R.id.button);
