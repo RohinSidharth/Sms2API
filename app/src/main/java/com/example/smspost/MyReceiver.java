@@ -36,7 +36,7 @@ public class MyReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         // TODO: This method is called when the BroadcastReceiver is receiving
         // an Intent broadcast.
-        //Log.i(TAG, "Intent Recieved: " + intent.getAction());
+        //Log.i(TAG, "Intent Received: " + intent.getAction());
         if (intent.getAction()==SMS_RECEIVED)
         {
             //retrieves a map of extended data from intent

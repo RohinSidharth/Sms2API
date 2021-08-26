@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#575E65"
+    android:background="#FFFFFF"
     android:orientation="vertical"
     android:theme="@style/CardView.Light"
     tools:context=".MainActivity">
@@ -13,10 +13,10 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="59dp"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal|center_vertical"
         android:text="Forward SMS To API"
-        android:textColor="#74E179"
+        android:textColor="#4C514D"
         android:textSize="34sp"
         android:textStyle="bold" />
 
@@ -29,7 +29,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="16dp"
         android:fontFamily="monospace"
         android:gravity="bottom"
         android:inputType="textMultiLine|textImeMultiLine"
@@ -45,20 +45,21 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#C6D8E4"
+        android:background="#FFFFFF"
         android:fontFamily="sans-serif-medium"
         android:gravity="center_vertical"
         android:inputType="textMultiLine|textImeMultiLine"
         android:padding="10dp"
         android:text="@string/instructions"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textViewStep1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoLink="none"
-        android:background="#C6D8E4"
+        android:background="#FFFFFF"
         android:clickable="true"
         android:fontFamily="sans-serif-medium"
         android:gravity="center_vertical"
@@ -72,7 +73,7 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#C6D8E4"
+        android:background="#FFFFFF"
         android:fontFamily="sans-serif-medium"
         android:gravity="center_vertical"
         android:inputType="textMultiLine|textImeMultiLine"
@@ -81,17 +82,23 @@
         android:textSize="16sp" />
 
     <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#2196F3" />
+
+    <TextView
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif-black"
         android:gravity="bottom"
         android:inputType="textMultiLine|textImeMultiLine"
         android:lineSpacingExtra="4sp"
         android:padding="12dp"
         android:text="Put API link below:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#2196F3"
+        android:textColor="#232425"
         android:textSize="19sp"
         android:textStyle="normal|bold"
         android:typeface="normal" />
@@ -100,7 +107,7 @@
         android:id="@+id/posturl"
         android:layout_width="match_parent"
         android:layout_height="67dp"
-        android:background="#FFFFFF"
+        android:background="#D9E6E6"
         android:ems="10"
         android:fontFamily="monospace"
         android:hint="http://192.168.0.100/api/sms"
