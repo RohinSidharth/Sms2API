@@ -16,9 +16,22 @@ public class MyService extends Service {
         return null;
     }
 
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId)
     {
         registerReceiver(smsReceiver, new IntentFilter("android.provider.Telephony.SMS_RECEIVED"));
         return START_STICKY;
+    }
+
+    @Override
+    public void onCreate()
+    {
+        super.onCreate();
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
     }
 }

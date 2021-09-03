@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="15dp"
     android:theme="@style/CardView.Light"
     tools:context=".MainActivity">
 
@@ -124,8 +126,25 @@
         android:fontFamily="sans-serif-black"
         android:gravity="center_horizontal"
         android:text="Save"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:backgroundTint="#415BEA"
         app:cornerRadius="@android:dimen/app_icon_size" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startService"
+        android:text="START SERVICE"
+        android:visibility="invisible"
+        app:backgroundTint="#4CAF50" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="stopService"
+        android:text="STOP SERVICE"
+        android:visibility="invisible" />
 
 </LinearLayout>
